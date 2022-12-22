@@ -1,0 +1,97 @@
+@media screen and (max-width: 1200px) {
+    .course {
+        width: calc(100% / 3 - 50px);
+        margin: 20px 0;
+    }
+
+    .tutorials {
+        flex-wrap: wrap;
+    }
+
+    .tutorials-left-col,
+    .tutorials-right-col {
+        width: 100%;
+    }
+
+    .tutorial-img {
+        padding: 25px;
+
+    }
+}
+
+@media screen and (max-width: 992px) {
+    .hero-text {
+        font-size: 40px;
+    }
+
+    #banner {
+        height: 520px;
+    }
+
+    .banner {
+        flex-wrap: wrap;
+    }
+
+    .banner-left {
+        width: 100%;
+        padding: 25px 25px 0 25px;
+    }
+
+    .banner-right {
+        width: 100%;
+        padding: 0px 15px 15px 15px;
+    }
+
+    .banner-right ul li {
+        justify-content: flex-start;
+    }
+
+    .banner-right-img {
+        width: 15%;
+    }
+
+    .tutorial-right {
+        flex-direction: row;
+        justify-content: flex-start;
+    }
+
+    .tutorial-right-img {
+        width: 200px;
+        height: 200px;
+        padding: 20px;
+    }
+
+    .tutorial-right-details p {
+        font-size: 30px;
+    }
+
+    .testimonials {
+        flex-wrap: wrap;
+    }
+
+    .testimonial {
+        width: 72%;
+        margin: 20px;
+    }
+
+    .footer {
+        flex-wrap: wrap;
+        justify-content: space-between;
+    }
+
+    .about,
+    .footer ul {
+        width: 45%;
+    }
+}
+
+@media screen and (max-width: 800px) {
+    .course {
+        width: calc(50% - 50px);
+    }
+
+    .hero-text {
+        width: 100%;
+        text-align: center;
+    }
+}
