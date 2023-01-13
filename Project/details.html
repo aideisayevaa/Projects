@@ -20,18 +20,23 @@
             <input type="checkbox" id="menu" />
             <nav>
                 <ul>
-                    <li><a href="#" class="active">Home</a></li>
-                    <li><a href="#">Haqqımızda</a></li>
-                    <li><a href="#">Partnyorlar</a></li>
+                    <li><a href="index.html" class="active">Home</a></li>
+                    <li><a href="#about">Haqqımızda</a></li>
+                    <li><a href="#partners">Partnyorlar</a></li>
                     <li><a href="#">Komandamız</a></li>
-                    <li><a href="#">Missiya</a></li>
-                    <li><a href="#">Vision</a></li>
-                    <li><a href="#">Əlaqə</a></li>
+                    <li><a href="#mission">Missiya</a></li>
+                    <li><a href="#vision">Vision</a></li>
+                    <li><a href="#footer">Əlaqə</a></li>
                 </ul>
                 <ul class="nav__login">
                     <li><a href="#">Log in</a></li>
                     <li><a href="#" class="active">Qeydiyyat</a></li>
-                    <li><a href="#">AZ <i class="down__icon fa-solid fa-angle-down"></i></a></li>
+                    <li>
+                        <select>
+                            <option>AZ</option>
+                            <option>RU</option>
+                        </select>
+                    </li>
                 </ul>
             </nav>
             <label for="menu" id="label_menu">
@@ -39,7 +44,6 @@
             </label>
         </div>
     </header>
-
     <!-- Single Project -->
     <section id="single__project">
         <div class="single__project__img">
@@ -120,54 +124,56 @@
         </div>
     </div>
 
-    <section id="banner">
-        <img src="./img/banner.jpg" alt="" />
+    <section id="banner" class=" ">
+        <img class="clip__path__up-to-down" src="./img/banner.jpg" alt="" />
     </section>
 
 
 
-
     <!-- Footer -->
-    <div class="bg__dark">
-        <div class="container">
-            <div class="footer__details">
-                <div class="logo">LOGO</div>
-                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
-                    incididunt ut labore et dolore magna </p>
-                <ul class="footer__nav">
-                    <li><a href="#">Home</a></li>
-                    <li><a href="#">Haqqımızda</a></li>
-                    <li><a href="#">Partnyorlar</a></li>
-                    <li><a href="#">Komandamız</a></li>
-                    <li><a href="#">Missiya</a></li>
-                    <li><a href="#">Vision</a></li>
-                    <li><a href="#">Əlaqə</a></li>
-                </ul>
-                <ul class="footer__socials">
-                    <li>
-                        <a href="#"> <i class="fa-brands fa-facebook-f"></i></a>
-                        <a href="#"><i class="fa-brands fa-instagram"></i></a>
-                    </li>
-                    <li>
-                        <i class="fa-brands fa-whatsapp"></i>
-                        <i class="fa-solid fa-phone"></i>
-                        <span>+99451 748 98 80</span>
-                    </li>
-                    <li>
-                        <i class="fa-solid fa-location-dot"></i>
-                        <span>youthprojects22@gmail.com</span>
-                    </li>
-                </ul>
-                <div class="footer__register">
-                    <button>Log in</button>
-                    <button>Qeydiyyat</button>
-                </div>
-                <div class="footer__bottom">
-                    ©2022 Powered by <span>LOREM IPSUM</span>
+    <div id="footer">
+        <div class="bg__dark clip__path__up">
+            <div class="container">
+                <div class="footer__details">
+                    <div class="logo">LOGO</div>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
+                        incididunt ut labore et dolore magna </p>
+                    <ul class="footer__nav">
+                        <li><a href="#">Home</a></li>
+                        <li><a href="#">Haqqımızda</a></li>
+                        <li><a href="#">Partnyorlar</a></li>
+                        <li><a href="#">Komandamız</a></li>
+                        <li><a href="#">Missiya</a></li>
+                        <li><a href="#">Vision</a></li>
+                        <li><a href="#">Əlaqə</a></li>
+                    </ul>
+                    <ul class="footer__socials">
+                        <li>
+                            <a href="#"> <i class="fa-brands fa-facebook-f"></i></a>
+                            <a href="#"><i class="fa-brands fa-instagram"></i></a>
+                        </li>
+                        <li>
+                            <i class="fa-brands fa-whatsapp"></i>
+                            <i class="fa-solid fa-phone"></i>
+                            <span>+99451 748 98 80</span>
+                        </li>
+                        <li>
+                            <i class="fa-solid fa-location-dot"></i>
+                            <span>youthprojects22@gmail.com</span>
+                        </li>
+                    </ul>
+                    <div class="footer__register">
+                        <button>Log in</button>
+                        <button>Qeydiyyat</button>
+                    </div>
+                    <div class="footer__bottom">
+                        ©2022 Powered by <span>LOREM IPSUM</span>
+                    </div>
                 </div>
             </div>
         </div>
     </div>
+
 
 </body>
 

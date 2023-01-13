@@ -21,18 +21,23 @@
             <input type="checkbox" id="menu" />
             <nav>
                 <ul>
-                    <li><a href="#" class="active">Home</a></li>
-                    <li><a href="#">Haqqımızda</a></li>
-                    <li><a href="#">Partnyorlar</a></li>
+                    <li><a href="index.html" class="active">Home</a></li>
+                    <li><a href="#about">Haqqımızda</a></li>
+                    <li><a href="#partners">Partnyorlar</a></li>
                     <li><a href="#">Komandamız</a></li>
-                    <li><a href="#">Missiya</a></li>
-                    <li><a href="#">Vision</a></li>
-                    <li><a href="#">Əlaqə</a></li>
+                    <li><a href="#mission">Missiya</a></li>
+                    <li><a href="#vision">Vision</a></li>
+                    <li><a href="#footer">Əlaqə</a></li>
                 </ul>
                 <ul class="nav__login">
                     <li><a href="#">Log in</a></li>
                     <li><a href="#" class="active">Qeydiyyat</a></li>
-                    <li><a href="#">AZ <i class="down__icon fa-solid fa-angle-down"></i></a></li>
+                    <li>
+                        <select>
+                            <option>AZ</option>
+                            <option>RU</option>
+                        </select>
+                    </li>
                 </ul>
             </nav>
             <label for="menu" id="label_menu">
@@ -46,7 +51,7 @@
     <div class="swiper">
         <div class="swiper-wrapper">
             <div class="swiper-slide">
-                <section id="hero" style="background-image: url(./img/hero__bg.jpg);">
+                <section id="hero" class="clip__path__down" style="background-image: url(./img/hero__bg.jpg);">
                     <div class="hero__details">
                         <h3>Technovation for Azerbaijan</h3>
                         <div class="line"></div>
@@ -55,8 +60,8 @@
                     </div>
                 </section>
             </div>
-            <div class="swiper-slide" style="background-image: url(./img/hero__bg2.jpg);">
-                <section id="hero">
+            <div class="swiper-slide">
+                <section id="hero" class="clip__path__down" style="background-image: url(./img/hero__bg2.jpg);">
                     <div class="hero__details">
                         <h3>AIEF</h3>
                         <div class="line"></div>
@@ -74,7 +79,7 @@
 
 
     <!-- About -->
-    <div class="bg__green">
+    <div class="bg__green clip__path__down">
         <div class="container">
             <section id="about">
                 <div class="heading">HAQQIMIZDA</div>
@@ -97,8 +102,8 @@
     </div>
 
     <!-- Partners -->
-    <div class="container">
-        <section id="partners">
+    <section id="partners">
+        <div class="container">
             <div class="heading">PARTNYORLAR</div>
             <ul class="partners">
                 <li>
@@ -120,11 +125,20 @@
                         İctimai Birliyi dəstək olurF </div>
                 </li>
             </ul>
+        </div>
+    </section>
+
+
+    <!-- Team -->
+    <div class="bg__green clip__path__up-to-down">
+        <section id="team">
+            <div class="heading">Komandamız</div>
+            <div class="text">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt
+                ut labore et dolore magna aliqua. Ut enim ad minim veniam</div>
+
 
         </section>
     </div>
-
-
 
     <!-- Mission -->
     <section id="mission">
@@ -150,11 +164,8 @@
     </section>
 
 
-
-
-
     <!-- Vision -->
-    <section id="vision">
+    <section id="vision" class="clip__path__up">
         <div class="bg__green">
             <div class="container">
                 <div class="heading">VİSİON</div>
@@ -182,45 +193,45 @@
     </section>
 
 
-
-
     <!-- Footer -->
-    <div class="bg__dark">
-        <div class="container">
-            <div class="footer__details">
-                <div class="logo">LOGO</div>
-                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
-                    incididunt ut labore et dolore magna </p>
-                <ul class="footer__nav">
-                    <li><a href="#">Home</a></li>
-                    <li><a href="#">Haqqımızda</a></li>
-                    <li><a href="#">Partnyorlar</a></li>
-                    <li><a href="#">Komandamız</a></li>
-                    <li><a href="#">Missiya</a></li>
-                    <li><a href="#">Vision</a></li>
-                    <li><a href="#">Əlaqə</a></li>
-                </ul>
-                <ul class="footer__socials">
-                    <li>
-                        <a href="#"> <i class="fa-brands fa-facebook-f"></i></a>
-                        <a href="#"><i class="fa-brands fa-instagram"></i></a>
-                    </li>
-                    <li>
-                        <i class="fa-brands fa-whatsapp"></i>
-                        <i class="fa-solid fa-phone"></i>
-                        <span>+99451 748 98 80</span>
-                    </li>
-                    <li>
-                        <i class="fa-solid fa-location-dot"></i>
-                        <span>youthprojects22@gmail.com</span>
-                    </li>
-                </ul>
-                <div class="footer__register">
-                    <button>Log in</button>
-                    <button>Qeydiyyat</button>
-                </div>
-                <div class="footer__bottom">
-                    ©2022 Powered by <span>LOREM IPSUM</span>
+    <div id="footer">
+        <div class="bg__dark clip__path__up">
+            <div class="container">
+                <div class="footer__details">
+                    <div class="logo">LOGO</div>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
+                        incididunt ut labore et dolore magna </p>
+                    <ul class="footer__nav">
+                        <li><a href="#">Home</a></li>
+                        <li><a href="#">Haqqımızda</a></li>
+                        <li><a href="#">Partnyorlar</a></li>
+                        <li><a href="#">Komandamız</a></li>
+                        <li><a href="#">Missiya</a></li>
+                        <li><a href="#">Vision</a></li>
+                        <li><a href="#">Əlaqə</a></li>
+                    </ul>
+                    <ul class="footer__socials">
+                        <li>
+                            <a href="#"> <i class="fa-brands fa-facebook-f"></i></a>
+                            <a href="#"><i class="fa-brands fa-instagram"></i></a>
+                        </li>
+                        <li>
+                            <i class="fa-brands fa-whatsapp"></i>
+                            <i class="fa-solid fa-phone"></i>
+                            <span>+99451 748 98 80</span>
+                        </li>
+                        <li>
+                            <i class="fa-solid fa-location-dot"></i>
+                            <span>youthprojects22@gmail.com</span>
+                        </li>
+                    </ul>
+                    <div class="footer__register">
+                        <button>Log in</button>
+                        <button>Qeydiyyat</button>
+                    </div>
+                    <div class="footer__bottom">
+                        ©2022 Powered by <span>LOREM IPSUM</span>
+                    </div>
                 </div>
             </div>
         </div>
@@ -229,23 +240,25 @@
 
 
 
+
     <!-- Swiper -->
     <script src="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.js"></script>
-
+    <script src="./app.js"></script>
     <script>
-        const swiper = new Swiper('.swiper', {
-            loop: true,
-            pagination: {
-                el: '.swiper-pagination',
-            },
+        /* Swiper Hero */
+        var swiper = new Swiper(".swiper", {
+            spaceBetween: 30,
+            effect: "fade",
             navigation: {
-                nextEl: '.swiper-button-next',
-                prevEl: '.swiper-button-prev',
+                nextEl: ".swiper-button-next",
+                prevEl: ".swiper-button-prev",
             },
-            scrollbar: {
-                el: '.swiper-scrollbar',
+            pagination: {
+                el: ".swiper-pagination",
+                clickable: true,
             },
         });
+
     </script>
 </body>
 
