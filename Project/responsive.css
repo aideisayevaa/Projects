@@ -1,0 +1,112 @@
+@media screen and (max-width:1200px) {
+    .container {
+        width: 90%;
+    }
+
+    header nav ul {
+        gap: 27px;
+    }
+}
+
+@media screen and (max-width:992px) {
+
+    #label_menu {
+        display: block;
+    }
+
+    header nav {
+        display: none;
+    }
+
+    #menu:checked~nav {
+        display: block;
+    }
+
+    .footer__details ul {
+        width: 80%;
+        margin: 0 auto;
+    }
+}
+
+@media screen and (max-width:768px) {
+
+
+
+    .swiper-button-prev,
+    .swiper-button-next {
+        width: 36px;
+        height: 36px;
+    }
+
+    .button-prev::after {
+        font-size: 14px;
+    }
+
+    .hero__details p {
+        font-size: 16px;
+    }
+
+    .about,
+    .mission,
+    .vision,
+    #single__project {
+        justify-content: center;
+    }
+
+    .about-img,
+    .mission-img,
+    .vision-img,
+    .single__project__img {
+        width: 80%;
+    }
+
+    .about-details,
+    .mission-details,
+    .vision-details,
+    .single__project__details {
+        width: 85%;
+        text-align: center;
+        margin-top: 52px;
+    }
+
+    #single__project {
+        padding: 40px;
+    }
+
+    .mission-details {
+        margin: 0 0 50px 0;
+    }
+
+    .partners li {
+        width: 60%;
+        margin-top: 50px;
+    }
+
+    .footer__nav li {
+        margin: 20px 10px 10px 10px;
+    }
+}
+
+@media screen and (max-width:476px) {
+
+    .heading {
+        margin: 20px 0;
+    }
+
+    .about-img,
+    .mission-img,
+    .vision-img,
+    .single__project__img {
+        width: 90%;
+        height: 420px;
+    }
+
+    .footer__nav {
+        flex-direction: column;
+    }
+
+    .footer__nav li {
+        margin: 10px;
+    }
+
+}
