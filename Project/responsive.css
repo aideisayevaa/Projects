@@ -11,7 +11,7 @@
     #details {
         padding: 20px 20px 50px 20px;
     }
-  
+
 
     .clip__path__up {
         clip-path: polygon(0px 100%, 0px 77%, 0px 59px, 0% 59px, 21% 37px, 49% 26px, 79% 37px, 89% 48px, 100% 60px, 100% 100%)
@@ -53,23 +53,35 @@
 
     #label_menu {
         display: block;
+        cursor: pointer;
     }
 
     header nav {
-        display: none;
         position: absolute;
-        top: 0;
+        top: -100%;
         left: 0;
         transform: translateY(72px);
         z-index: 9999;
-        /* height: 0;
+        opacity: 0;
+        visibility: hidden;
+        transition: 0.3s ease all;
+        height: 0;
+        display: block;
+        gap: 0;
+        /* 
         transition: 0.4s ease all;
         opacity: 0; */
     }
 
     #menu:checked~nav {
-        display: block;
-        /* height: 100%;
+        opacity: 1;
+        top: 0;
+        visibility: visible;
+        height: 100%;
+        display: flex;
+        flex-direction: column;
+        gap: 0;
+        /* 
         opacity: 1; */
     }
 
@@ -81,6 +93,9 @@
 
 @media screen and (max-width:768px) {
 
+    .text {
+        font-size: 16px;
+    }
 
 
     .swiper-button-prev,
@@ -144,6 +159,9 @@
 }
 
 @media screen and (max-width:476px) {
+    .text {
+        font-size: 15px;
+    }
 
     .heading {
         margin: 20px 0;

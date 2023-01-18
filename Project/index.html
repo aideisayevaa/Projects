@@ -21,16 +21,16 @@
             <input type="checkbox" id="menu" />
             <nav>
                 <ul>
-                    <li><a href="index.html" class="active">Home</a></li>
-                    <li><a href="#about">Haqqımızda</a></li>
-                    <li><a href="#partners">Partnyorlar</a></li>
-                    <li><a href="#team">Komandamız</a></li>
-                    <li><a href="#mission">Missiya</a></li>
-                    <li><a href="#vision">Vision</a></li>
-                    <li><a href="#footer">Əlaqə</a></li>
+                    <li class="nav__list active"><a href="#hero">Home</a></li>
+                    <li class="nav__list"><a href="#about">Haqqımızda</a></li>
+                    <li class="nav__list"><a href="#partners">Partnyorlar</a></li>
+                    <li class="nav__list"><a href="#team">Komandamız</a></li>
+                    <li class="nav__list"><a href="#mission">Missiya</a></li>
+                    <li class="nav__list"><a href="#vision">Vision</a></li>
+                    <li class="nav__list"><a href="#footer">Əlaqə</a></li>
                 </ul>
                 <ul class="nav__login">
-                    <li><a href="#">Log in</a></li>
+                    <li><a href="./login.html">Log in</a></li>
                     <li><a href="#" class="active">Qeydiyyat</a></li>
                     <li>
                         <select>
@@ -46,9 +46,8 @@
         </div>
     </header>
 
-
     <!-- Hero -->
-    <div class="swiper">
+    <div class="swiperr">
         <div class="swiper-wrapper">
             <div class="swiper-slide">
                 <section id="hero" class="clip__path__down" style="background-image: url(./img/hero__bg.jpg);">
@@ -136,6 +135,73 @@
             <div class="text">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt
                 ut labore et dolore magna aliqua. Ut enim ad minim veniam</div>
 
+            <div class="swiper mySwiper">
+                <div class="swiper-wrapper">
+                    <div class="swiper-slide">
+                        <img src="./img/team1.jpg" />
+                        <div class="swiper-details">
+                            <h4>Aygun Dadashova</h4>
+                            <span>Layihe Rehberi</span>
+                        </div>
+                    </div>
+                    <div class="swiper-slide">
+                        <img src="./img/team2.jpg" />
+                        <div class="swiper-details">
+                            <h4>Aygun Dadashova</h4>
+                            <span>Layihe Rehberi</span>
+                        </div>
+                    </div>
+                    <div class="swiper-slide">
+                        <img src="./img/team3.jpg" />
+                        <div class="swiper-details">
+                            <h4>Aygun Dadashova</h4>
+                            <span>Layihe Rehberi</span>
+                        </div>
+                    </div>
+                    <div class="swiper-slide">
+                        <img src="./img/team4.jpg" />
+                        <div class="swiper-details">
+                            <h4>Aygun Dadashova</h4>
+                            <span>Layihe Rehberi</span>
+                        </div>
+                    </div>
+                    <div class="swiper-slide">
+                        <img src="./img/team5.jpg" />
+                        <div class="swiper-details">
+                            <h4>Aygun Dadashova</h4>
+                            <span>Layihe Rehberi</span>
+                        </div>
+                    </div>
+                    <div class="swiper-slide">
+                        <img src="./img/team1.jpg" />
+                        <div class="swiper-details">
+                            <h4>Aygun Dadashova</h4>
+                            <span>Layihe Rehberi</span>
+                        </div>
+                    </div>
+                    <div class="swiper-slide">
+                        <img src="./img/team2.jpg" />
+                        <div class="swiper-details">
+                            <h4>Aygun Dadashova</h4>
+                            <span>Layihe Rehberi</span>
+                        </div>
+                    </div>
+                    <div class="swiper-slide">
+                        <img src="./img/team3.jpg" />
+                        <div class="swiper-details">
+                            <h4>Aygun Dadashova</h4>
+                            <span>Layihe Rehberi</span>
+                        </div>
+                    </div>
+                    <div class="swiper-slide">
+                        <img src="./img/team4.jpg" />
+                        <div class="swiper-details">
+                            <h4>Aygun Dadashova</h4>
+                            <span>Layihe Rehberi</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
 
         </section>
     </div>
@@ -194,7 +260,7 @@
 
 
     <!-- Footer -->
-    <div id="footer">
+    <section id="footer">
         <div class="bg__dark clip__path__up">
             <div class="container">
                 <div class="footer__details">
@@ -235,7 +301,7 @@
                 </div>
             </div>
         </div>
-    </div>
+    </section>
 
 
 
@@ -246,7 +312,7 @@
     <script src="./app.js"></script>
     <script>
         /* Swiper Hero */
-        var swiper = new Swiper(".swiper", {
+        var swiper = new Swiper(".swiperr", {
             spaceBetween: 30,
             effect: "fade",
             loop: true,
@@ -258,6 +324,24 @@
                 el: ".swiper-pagination",
                 clickable: true,
             },
+        });
+
+
+
+        var swiper = new Swiper(".mySwiper", {
+            effect: "coverflow",
+            grabCursor: true,
+            centeredSlides: true,
+            loop: true,
+            spaceBetween: 30,
+            slidesPerView: "auto",
+            coverflowEffect: {
+                rotate: 25,
+                stretch: 10,
+                depth: 60,
+                modifier: 1,
+                slideShadows: true,
+            }
         });
 
     </script>

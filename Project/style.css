@@ -43,7 +43,7 @@ a {
 }
 
 .clip__path__down {
-    clip-path: polygon(0 0, 100% 0, 100% 94%, 83% 98%, 71% 99%, 72% 99%, 41% 100%, 19% 98%, 0 94%, 0 58%)
+    clip-path: polygon(50% 0%, 100% 0, 100% 91%, 86% 94%, 69% 96%, 49% 97%, 44% 97%, 17% 95%, 0 91%, 0 0)
 }
 
 .clip__path__up {
@@ -91,6 +91,10 @@ header nav ul {
 
 .logo {
     color: #27BD63;
+    font-size: 32px;
+    font-weight: 600;
+    margin: 50px 0;
+    text-align: center;
 }
 
 .down__icon {
@@ -142,7 +146,7 @@ header nav select:focus {
     background-repeat: no-repeat;
     background-size: cover;
     position: relative;
-    height: 100vh;
+    height: 100%;
     z-index: 0;
     display: flex;
     justify-content: center;
@@ -222,8 +226,10 @@ header nav select:focus {
     font-size: 18px;
 }
 
-.swiper {
+.swiperr {
     background-color: #E8F3EC;
+    /* max-height: 1000px; */
+    height: 100vh;
 }
 
 .swiper-pagination {
@@ -232,6 +238,10 @@ header nav select:focus {
 
 .swiper-pagination-bullet-active {
     background-color: #27BD63;
+}
+
+.swiperr .swiper-slide {
+    height: 100%;
 }
 
 /* About */
@@ -306,6 +316,37 @@ header nav select:focus {
     text-align: center;
 }
 
+#team .swiper-slide img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.swiper {
+    width: 100%;
+    max-width: 1400px;
+    padding-top: 50px;
+    padding-bottom: 50px;
+}
+
+.swiper-slide {
+    background-position: center;
+    background-size: cover;
+    width: 300px;
+    height: 300px;
+}
+
+.swiper-slide img {
+    display: block;
+    width: 100%;
+    height: 50%;
+}
+
+.swiper-details {
+    text-align: center;
+    padding: 10px;
+}
+
 /* Mission and Vision*/
 #mission,
 #vision {
@@ -323,6 +364,7 @@ header nav select:focus {
     text-transform: uppercase;
     font-weight: bold;
     transform: rotate(-90deg) translate(-50%, 130%);
+    z-index: -1;
 }
 
 .mission-img,
@@ -397,12 +439,6 @@ header nav select:focus {
 
 .footer__details {
     text-align: center;
-}
-
-.footer__details .logo {
-    font-size: 32px;
-    font-weight: 900;
-    margin: 50px 0;
 }
 
 .footer__details p {
@@ -562,4 +598,97 @@ header nav select:focus {
     height: 100%;
     object-fit: cover;
     margin-top: 60px;
+}
+
+
+/* Login Page */
+#login {
+    height: 100vh;
+    display: flex;
+}
+
+.login__img {
+    width: 50%;
+    height: 100%;
+    position: relative;
+    z-index: 0;
+}
+
+.login__img img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.login__img::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(39, 189, 99, 0.2);
+    z-index: 1;
+}
+
+.form {
+    width: 50%;
+    background-color: #fff;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.form form {
+    width: 300px;
+}
+
+
+.form p {
+    color: rgba(33, 33, 33, 1);
+    font-weight: 500;
+}
+
+.login__input {
+    border: 1px solid rgba(217, 217, 217, 1);
+    border-radius: 5px;
+    height: 40px;
+    margin: 10px 0 20px;
+    width: 100%;
+    padding: 0 30px;
+    font-size: 17px;
+}
+
+.login__bottom {
+    display: flex;
+    justify-content: space-between;
+    font-size: 14px;
+}
+
+.form a {
+    color: rgba(5, 143, 243, 1);
+    border-bottom: 1px solid rgba(5, 143, 243, 1);
+    padding-bottom: 1px;
+    font-weight: 500;
+}
+
+.form input[type="submit"] {
+    width: 100%;
+    background-color: #27BD63;
+    color: #fff;
+    text-transform: uppercase;
+    border-radius: 5px;
+    height: 40px;
+    border: none;
+    margin-top: 40px;
+    cursor: pointer;
+}
+
+.form form>a {
+    color: #27BD63;
+    border-bottom: 1px solid #27BD63;
+    margin: 15px auto;
+    display: block;
+    width: max-content;
 }
