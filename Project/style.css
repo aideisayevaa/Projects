@@ -8,7 +8,7 @@
     list-style: none;
     outline: none;
     font-family: 'Montserrat', sans-serif;
-
+    user-select: none;
 }
 
 html {
@@ -18,7 +18,7 @@ html {
 /* Common */
 
 .container {
-    width: 80%;
+    width: 85%;
     max-width: 1400px;
     margin: 0 auto;
 }
@@ -36,23 +36,12 @@ a {
 }
 
 .text {
-    font-size: 20px;
+    font-size: 16px;
     font-weight: 400;
-    line-height: 24px;
+    line-height: 28px;
     color: #404040;
 }
 
-.clip__path__down {
-    clip-path: polygon(50% 0%, 100% 0, 100% 91%, 86% 94%, 69% 96%, 49% 97%, 44% 97%, 17% 95%, 0 91%, 0 0)
-}
-
-.clip__path__up {
-    clip-path: polygon(0px 100%, 0px 77%, 0px 8%, 23% 5%, 46% 19px, 51% 18px, 75% 4%, 90% 6%, 100% 8%, 100% 100%)
-}
-
-.clip__path__up-to-down {
-    clip-path: polygon(50% 5%, 70% 4%, 100% 0, 100% 100%, 75% 97%, 51% 96%, 24% 97%, 0 100%, 0 0, 25% 4%);
-}
 
 /* Header */
 header {
@@ -151,8 +140,15 @@ header nav select:focus {
     display: flex;
     justify-content: center;
     align-items: center;
-    /* border-bottom-right-radius: 20%;
-    border-bottom-left-radius: 20%; */
+}
+
+.vector__bottom__green {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    z-index: 2;
+    width: 100%;
+    transform: translateY(88%);
 }
 
 #hero::before {
@@ -230,6 +226,7 @@ header nav select:focus {
     background-color: #E8F3EC;
     /* max-height: 1000px; */
     height: 100vh;
+    position: relative;
 }
 
 .swiper-pagination {
@@ -248,11 +245,27 @@ header nav select:focus {
 .bg__green {
     background: #E8F3EC;
     padding: 60px 0;
+    position: relative;
 }
 
-#about,
-#mission {
+.vector__ellipse {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    z-index: 2;
+    width: 100%;
+    transform: translateY(28%);
+}
+
+
+#about {
     padding: 60px 0;
+    z-index: 3;
+    position: relative;
+}
+
+#mission {
+    padding: 60px 0 90px;
 }
 
 .about,
@@ -285,9 +298,15 @@ header nav select:focus {
     width: 45%;
 }
 
+.vision-details {
+    padding-bottom: 60px;
+}
+
 /* Partners */
 #partners {
-    padding: 50px 0;
+    padding: 70px 0 50px 0;
+    position: relative;
+    z-index: 3;
 }
 
 .partners {
@@ -297,18 +316,57 @@ header nav select:focus {
 }
 
 .partners li {
-    width: 28%;
     text-align: center;
 }
 
 .partners li img {
     height: 113px;
     object-fit: contain;
-    margin: 30px 0;
+    margin: 30px auto;
     width: 90%;
 }
 
+.partners .swiper-wrapper {
+    justify-content: space-around;
+}
+
 /* Team */
+
+.bg__gray {
+    padding: 60px 0 150px 0;
+    background: rgba(247, 247, 247, 1);
+    position: relative;
+}
+
+
+.vector__ellipse__white {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    z-index: 2;
+    width: 100%;
+    transform: translateY(51%);
+}
+
+.vector__top__ellipse__white {
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 2;
+    width: 100%;
+    transform: translateY(-60%);
+}
+
+#team {
+    position: relative;
+    /* z-index: 6; */
+    padding: 60px 0;
+}
+
+#team .swiper {
+    position: relative;
+    z-index: 1;
+}
 
 #team .text {
     width: 60%;
@@ -320,6 +378,34 @@ header nav select:focus {
     width: 100%;
     height: 100%;
     object-fit: cover;
+}
+
+#team .swiper-slide {
+    height: 450px;
+}
+
+.team__head {
+    position: relative;
+    z-index: 6;
+}
+
+.slider__bottom__ellipse {
+    position: absolute;
+    bottom: 17%;
+    left: 0;
+    z-index: 5;
+    /* transform: translateY(-100%); */
+    width: 100%;
+}
+
+.slider__top__ellipse {
+    position: absolute;
+    top: 23%;
+    left: 0;
+    z-index: 4;
+
+    /* transform: translateY(152%); */
+    width: 100%;
 }
 
 .swiper {
@@ -352,10 +438,20 @@ header nav select:focus {
 #vision {
     position: relative;
     overflow: hidden;
+    z-index: 3;
 }
 
-#mission::after {
-    content: 'missiya';
+.vector__ellipse__green {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    z-index: 2;
+    width: 100%;
+    transform: translateY(69%);
+}
+
+
+.mission__left {
     position: absolute;
     top: 0;
     right: 0;
@@ -365,6 +461,7 @@ header nav select:focus {
     font-weight: bold;
     transform: rotate(-90deg) translate(-50%, 130%);
     z-index: -1;
+    user-select: none;
 }
 
 .mission-img,
@@ -373,27 +470,28 @@ header nav select:focus {
     z-index: 0;
 }
 
-.mission-img::after {
-    content: 'missiya';
+.mission__img__text {
     color: #F7F7F7;
     right: 20px;
+
 }
 
-.vision-img::after {
+.vision__img__text {
     content: 'vision';
     color: #40404033;
     left: 20px;
 }
 
 
-.mission-img::after,
-.vision-img::after {
+.mission__img__text,
+.vision__img__text {
     position: absolute;
     bottom: 0;
     font-size: 70px;
     text-transform: uppercase;
     font-weight: bold;
     z-index: 2;
+    user-select: none;
 }
 
 .mission-img::before {
@@ -407,21 +505,20 @@ header nav select:focus {
     z-index: 1;
 }
 
-#vision::after,
-#vision::before {
+.vision__left,
+.vision__right {
     position: absolute;
     font-size: 214px;
     color: #40404005;
     text-transform: uppercase;
-    content: 'vision';
 }
 
-#vision::after {
+.vision__left {
     top: 0;
     left: -15%;
 }
 
-#vision::before {
+.vision__right {
     bottom: 0;
     right: -15%;
 }
@@ -430,15 +527,31 @@ header nav select:focus {
 
 #footer {
     background: #E8F3EC;
+    position: relative;
+    /* padding-top: 80px; */
+    z-index: 3;
 }
+
+.vector__ellipse__dark {
+    position: absolute;
+    top: -10%;
+    left: 0;
+    z-index: 2;
+    width: 100%;
+    /* transform: translateY(19%); */
+}
+
+
 
 .bg__dark {
     background: #353836;
-    padding: 60px 0 40px 0;
+    padding: 90px 0 40px 0;
 }
 
 .footer__details {
     text-align: center;
+    position: relative;
+    z-index: 3;
 }
 
 .footer__details p {
@@ -603,8 +716,32 @@ header nav select:focus {
 
 /* Login Page */
 #login {
-    height: 100vh;
+    height: 120vh;
     display: flex;
+    position: relative;
+    flex-wrap: wrap;
+    /* margin-bottom: 60px; */
+}
+
+.register#login {
+    height: 100%;
+}
+
+.register .form {
+    padding: 80px 0 100px;
+}
+
+.register .login__img {
+    height: auto;
+}
+
+.login__ellipse {
+    position: absolute;
+    top: 0;
+    left: 50%;
+    transform: translateX(-30%);
+    z-index: 1;
+    height: 100%;
 }
 
 .login__img {
@@ -638,6 +775,7 @@ header nav select:focus {
     display: flex;
     justify-content: center;
     align-items: center;
+    z-index: 2;
 }
 
 .form form {
@@ -685,10 +823,82 @@ header nav select:focus {
     cursor: pointer;
 }
 
+.register input[type="submit"] {
+    margin-top: 20px;
+}
+
+.register {
+    margin-bottom: 20px;
+}
+
 .form form>a {
     color: #27BD63;
     border-bottom: 1px solid #27BD63;
     margin: 15px auto;
     display: block;
     width: max-content;
+}
+
+/* List Page */
+#list {
+    margin-top: 72px;
+}
+
+#list h4 {
+    color: rgba(64, 64, 64, 1);
+    font-size: 16px;
+    padding: 30px 0 15px 15px;
+}
+
+.lists {
+    display: flex;
+    flex-wrap: wrap;
+    /* justify-content: space-between; */
+}
+
+.lists li {
+    width: calc(24% - 20px);
+    margin: 15px;
+    border: 1px solid rgba(217, 217, 217, 1);
+}
+
+.list__img {
+    width: 100%;
+    height: 150px;
+}
+
+.list__img img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.list__details {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 16px;
+}
+
+.list__details h5 {
+    color: rgba(64, 64, 64, 1);
+    font-size: 16px;
+}
+
+
+.list__details p {
+    color: rgba(64, 64, 64, 1);
+    font-size: 14px;
+    font-weight: 300;
+    margin-top: 10px;
+}
+
+.list__details span i {
+    cursor: pointer;
+}
+
+#list .footer__bottom {
+    color: rgba(64, 64, 64, 1);
+    padding: 30px 0px 30px 15px;
+    font-weight: 400;
 }

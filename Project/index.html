@@ -31,7 +31,7 @@
                 </ul>
                 <ul class="nav__login">
                     <li><a href="./login.html">Log in</a></li>
-                    <li><a href="#" class="active">Qeydiyyat</a></li>
+                    <li><a href="./register.html" class="active">Qeydiyyat</a></li>
                     <li>
                         <select>
                             <option>AZ</option>
@@ -50,7 +50,7 @@
     <div class="swiperr">
         <div class="swiper-wrapper">
             <div class="swiper-slide">
-                <section id="hero" class="clip__path__down" style="background-image: url(./img/hero__bg.jpg);">
+                <section id="hero" style="background-image: url(./img/hero__bg.jpg);">
                     <div class="hero__details">
                         <h3>Technovation for Azerbaijan</h3>
                         <div class="line"></div>
@@ -60,7 +60,7 @@
                 </section>
             </div>
             <div class="swiper-slide">
-                <section id="hero" class="clip__path__down" style="background-image: url(./img/hero__bg2.jpg);">
+                <section id="hero" style="background-image: url(./img/hero__bg2.jpg);">
                     <div class="hero__details">
                         <h3>AIEF</h3>
                         <div class="line"></div>
@@ -74,11 +74,12 @@
         <div class="swiper-pagination"></div>
         <div class="swiper-button-prev"></div>
         <div class="swiper-button-next"></div>
+        <img src="./img/vector__bottom__green.png" class="vector__bottom__green" alt="">
     </div>
 
 
     <!-- About -->
-    <div class="bg__green clip__path__down">
+    <div class="bg__green ">
         <div class="container">
             <section id="about">
                 <div class="heading">HAQQIMIZDA</div>
@@ -98,6 +99,7 @@
                 </div>
             </section>
         </div>
+        <img src="./img/vector__ellipse.png" class="vector__ellipse" alt="">
     </div>
 
     <!-- Partners -->
@@ -105,105 +107,140 @@
         <div class="container">
             <div class="heading">PARTNYORLAR</div>
             <ul class="partners">
-                <li>
-                    <img src="./img/partner_1.png" alt="">
-                    <div class="text">
-                        Hər iki layihə ABŞ-ın Azərbaycandakı Səfirliyi tərəfindən dəstəklənir.
+
+                <div class="swiper" id="mySwiper">
+                    <div class="swiper-wrapper">
+                        <div class="swiper-slide">
+                            <li>
+                                <a href="#"> <img src="./img/partner_1.png" alt=""></a>
+                                <div class="text">
+                                    Hər iki layihə ABŞ-ın Azərbaycandakı Səfirliyi tərəfindən dəstəklənir.
+                                </div>
+                            </li>
+                        </div>
+                        <div class="swiper-slide">
+                            <li>
+                                <a href="#"> <img src="./img/partner_2.png" alt=""></a>
+                                <div class="text">
+                                    Ölkənin ümumtəhsil və ali məktəblərinin müəlllim və tələbələri ilə əlaqələrin
+                                    yaradılması
+                                    üçün Elm və Təhsil Nazirliyi dəstək olur. </div>
+                            </li>
+                        </div>
+                        <div class="swiper-slide">
+                            <li>
+                                <a href="#"> <img src="./img/partner_3.jpg" alt=""></a>
+                                <div class="text">
+                                    Layihələrin başlanması elanlarını paylaşmaq üçün Amerika Təhsilli Azərbaycanlı
+                                    Məzunlar
+                                    İctimai Birliyi dəstək olurF </div>
+                            </li>
+                        </div>
+                        <!-- <div class="swiper-slide">
+                            <li>
+                                <a href="#"> <img src="./img/partner_3.jpg" alt=""></a>
+                                <div class="text">
+                                    Layihələrin başlanması elanlarını paylaşmaq üçün Amerika Təhsilli Azərbaycanlı
+                                    Məzunlar
+                                    İctimai Birliyi dəstək olurF </div>
+                            </li>
+                        </div> -->
+
                     </div>
-                </li>
-                <li>
-                    <img src="./img/partner_2.png" alt="">
-                    <div class="text">
-                        Ölkənin ümumtəhsil və ali məktəblərinin müəlllim və tələbələri ilə əlaqələrin yaradılması
-                        üçün Elm və Təhsil Nazirliyi dəstək olur. </div>
-                </li>
-                <li>
-                    <img src="./img/partner_3.jpg" alt="">
-                    <div class="text">
-                        Layihələrin başlanması elanlarını paylaşmaq üçün Amerika Təhsilli Azərbaycanlı Məzunlar
-                        İctimai Birliyi dəstək olurF </div>
-                </li>
+                </div>
+
+
+
+
             </ul>
         </div>
     </section>
 
 
     <!-- Team -->
-    <div class="bg__green clip__path__up-to-down">
+    <div class="bg__gray ">
+
         <section id="team">
-            <div class="heading">Komandamız</div>
-            <div class="text">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt
-                ut labore et dolore magna aliqua. Ut enim ad minim veniam</div>
+            <div class="team__head">
+                <div class="heading">KOMANDAMIZ</div>
+                <div class="text">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
+                    incididunt
+                    ut labore et dolore magna aliqua. Ut enim ad minim veniam</div>
+            </div>
 
             <div class="swiper mySwiper">
                 <div class="swiper-wrapper">
                     <div class="swiper-slide">
                         <img src="./img/team1.jpg" />
-                        <div class="swiper-details">
+                        <!-- <div class="swiper-details">
                             <h4>Aygun Dadashova</h4>
                             <span>Layihe Rehberi</span>
-                        </div>
+                        </div> -->
                     </div>
                     <div class="swiper-slide">
                         <img src="./img/team2.jpg" />
-                        <div class="swiper-details">
+                        <!-- <div class="swiper-details">
                             <h4>Aygun Dadashova</h4>
                             <span>Layihe Rehberi</span>
-                        </div>
+                        </div> -->
                     </div>
                     <div class="swiper-slide">
                         <img src="./img/team3.jpg" />
-                        <div class="swiper-details">
+                        <!-- <div class="swiper-details">
                             <h4>Aygun Dadashova</h4>
                             <span>Layihe Rehberi</span>
-                        </div>
+                        </div> -->
                     </div>
                     <div class="swiper-slide">
                         <img src="./img/team4.jpg" />
-                        <div class="swiper-details">
+                        <!-- <div class="swiper-details">
                             <h4>Aygun Dadashova</h4>
                             <span>Layihe Rehberi</span>
-                        </div>
+                        </div> -->
                     </div>
                     <div class="swiper-slide">
                         <img src="./img/team5.jpg" />
-                        <div class="swiper-details">
+                        <!-- <div class="swiper-details">
                             <h4>Aygun Dadashova</h4>
                             <span>Layihe Rehberi</span>
-                        </div>
+                        </div> -->
                     </div>
                     <div class="swiper-slide">
                         <img src="./img/team1.jpg" />
-                        <div class="swiper-details">
+                        <!-- <div class="swiper-details">
                             <h4>Aygun Dadashova</h4>
                             <span>Layihe Rehberi</span>
-                        </div>
+                        </div> -->
                     </div>
                     <div class="swiper-slide">
                         <img src="./img/team2.jpg" />
-                        <div class="swiper-details">
+                        <!-- <div class="swiper-details">
                             <h4>Aygun Dadashova</h4>
                             <span>Layihe Rehberi</span>
-                        </div>
+                        </div> -->
                     </div>
                     <div class="swiper-slide">
                         <img src="./img/team3.jpg" />
-                        <div class="swiper-details">
+                        <!-- <div class="swiper-details">
                             <h4>Aygun Dadashova</h4>
                             <span>Layihe Rehberi</span>
-                        </div>
+                        </div> -->
                     </div>
                     <div class="swiper-slide">
                         <img src="./img/team4.jpg" />
-                        <div class="swiper-details">
+                        <!-- <div class="swiper-details">
                             <h4>Aygun Dadashova</h4>
                             <span>Layihe Rehberi</span>
-                        </div>
+                        </div> -->
                     </div>
                 </div>
             </div>
 
         </section>
+        <img src="./img/vector__ellipse__gray.png" class="slider__bottom__ellipse" alt="">
+        <img src="./img/vector__ellipse__gray.png" class="slider__top__ellipse" alt="">
+        <img src="./img/vector__ellipse__white.png" class="vector__ellipse__white" alt="">
+        <img src="./img/vector__ellipse__white.png" class="vector__top__ellipse__white" alt="">
     </div>
 
     <!-- Mission -->
@@ -224,20 +261,24 @@
                 </div>
                 <div class="mission-img">
                     <img src="./img/mission.jpg" alt="">
+                    <div class="mission__img__text">mİssİya</div>
                 </div>
             </div>
         </div>
+        <img src="./img/vector__ellipse.png" class="vector__ellipse__green" alt="">
+        <div class="mission__left">mİssİya</div>
     </section>
 
 
     <!-- Vision -->
-    <section id="vision" class="clip__path__up">
+    <section id="vision">
         <div class="bg__green">
             <div class="container">
                 <div class="heading">VİSİON</div>
                 <div class="vision">
                     <div class="vision-img">
                         <img src="./img/vision.jpg" alt="">
+                        <div class="vision__img__text">vİsİon</div>
                     </div>
                     <div class="vision-details">
                         <p class="text">
@@ -256,12 +297,14 @@
                 </div>
             </div>
         </div>
+        <div class="vision__left">vİsİon</div>
+        <div class="vision__right">vİsİon</div>
     </section>
 
 
     <!-- Footer -->
     <section id="footer">
-        <div class="bg__dark clip__path__up">
+        <div class="bg__dark">
             <div class="container">
                 <div class="footer__details">
                     <div class="logo">LOGO</div>
@@ -296,11 +339,12 @@
                         <button>Qeydiyyat</button>
                     </div>
                     <div class="footer__bottom">
-                        ©2022 Powered by <span>LOREM IPSUM</span>
+                        ©2023 Powered by <span>CODERS AZERBAIJAN</span>
                     </div>
                 </div>
             </div>
         </div>
+        <img src="./img/vector__ellipse__dark.png" class="vector__ellipse__dark" alt="">
     </section>
 
 
@@ -311,6 +355,34 @@
     <script src="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.js"></script>
     <script src="./app.js"></script>
     <script>
+        /* Partners */
+        // console.log(window.innerWidth)
+        let count_partner = document.querySelectorAll(".partners .swiper-slide")
+        let partner_swiper_wrapper = document.querySelector(".partners .swiper-wrapper")
+        if (count_partner.length > 3 || window.innerWidth < 1024) {
+            partner_swiper_wrapper.style.justifyContent = "flex-start"
+            var swiper = new Swiper("#mySwiper", {
+                loop: true,
+                autoplay: {
+                    delay: 2500,
+                    disableOnInteraction: false,
+                },
+                breakpoints: {
+                    0: {
+                        slidesPerView: 1,
+                        spaceBetween: 20,
+
+
+                    },
+                    1100: {
+                        slidesPerView: 3,
+                        spaceBetween: 50,
+
+                    },
+                }
+            });
+
+        }
         /* Swiper Hero */
         var swiper = new Swiper(".swiperr", {
             spaceBetween: 30,
@@ -320,6 +392,10 @@
                 nextEl: ".swiper-button-next",
                 prevEl: ".swiper-button-prev",
             },
+            autoplay: {
+                delay: 4500,
+                disableOnInteraction: false,
+            },
             pagination: {
                 el: ".swiper-pagination",
                 clickable: true,
@@ -327,22 +403,27 @@
         });
 
 
-
+        /* Team */
         var swiper = new Swiper(".mySwiper", {
-            effect: "coverflow",
-            grabCursor: true,
-            centeredSlides: true,
-            loop: true,
-            spaceBetween: 30,
-            slidesPerView: "auto",
-            coverflowEffect: {
-                rotate: 25,
-                stretch: 10,
-                depth: 60,
-                modifier: 1,
-                slideShadows: true,
+            // slidesPerView: 4,
+            // spaceBetween: 50,
+            breakpoints: {
+                0: {
+                    slidesPerView: 2,
+                    spaceBetween: 20,
+                },
+                640: {
+                    slidesPerView: 3,
+                    spaceBetween: 40,
+                },
+                1024: {
+                    slidesPerView: 4,
+                    spaceBetween: 50,
+                },
             }
         });
+
+
 
     </script>
 </body>
