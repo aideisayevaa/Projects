@@ -23,6 +23,12 @@ html {
     margin: 0 auto;
 }
 
+.container__full {
+    width: 100%;
+    max-width: 1900px;
+    margin: 0 auto;
+}
+
 a {
     color: inherit;
 }
@@ -107,26 +113,22 @@ header nav ul {
     cursor: pointer;
 }
 
-header nav select {
+.nav__login {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+header select {
     border: 1px solid #fff;
     outline: none;
+    cursor: pointer;
 }
 
-header nav select:focus {
+header select:focus {
     border: 1px solid #fff;
 }
 
-/* 
-.languages {
-    display: none;
-    position: absolute;
-    top: 150%;
-    left: 0;
-    border: 1px solid gray;
-    padding: 6px;
-    background-color: #fff;
-    border-radius: 3px;
-} */
 
 /* Hero */
 #hero {
@@ -391,7 +393,7 @@ header nav select:focus {
 
 .slider__bottom__ellipse {
     position: absolute;
-    bottom: 17%;
+    bottom: -5%;
     left: 0;
     z-index: 5;
     /* transform: translateY(-100%); */
@@ -400,17 +402,17 @@ header nav select:focus {
 
 .slider__top__ellipse {
     position: absolute;
-    top: 23%;
+    top: -4%;
     left: 0;
     z-index: 4;
-
     /* transform: translateY(152%); */
     width: 100%;
 }
 
 .swiper {
     width: 100%;
-    max-width: 1400px;
+    /* max-width: 1400px; */
+    /* height: ; */
     padding-top: 50px;
     padding-bottom: 50px;
 }
@@ -419,7 +421,7 @@ header nav select:focus {
     background-position: center;
     background-size: cover;
     width: 300px;
-    height: 300px;
+    height: 350px;
 }
 
 .swiper-slide img {
@@ -683,6 +685,8 @@ header nav select:focus {
 /* Details */
 #details {
     padding: 70px 0;
+    position: relative;
+    z-index: 3;
 }
 
 #details .text ul li ul li {
@@ -703,14 +707,23 @@ header nav select:focus {
 
 /* Banner */
 #banner {
-    height: 80vh;
+    height: 650px;
+    position: relative;
 }
 
-#banner img {
+.banner__img {
     width: 100%;
     height: 100%;
     object-fit: cover;
     margin-top: 60px;
+}
+
+.banner__ellipse {
+    position: absolute;
+    top: 0%;
+    left: 0;
+    z-index: 2;
+    width: 100%;
 }
 
 
@@ -901,4 +914,75 @@ header nav select:focus {
     color: rgba(64, 64, 64, 1);
     padding: 30px 0px 30px 15px;
     font-weight: 400;
+}
+
+.profile {
+    display: flex;
+    gap: 15px;
+    align-items: center;
+}
+
+.profile span {
+    width: 32px;
+    height: 32px;
+    color: #fff;
+    background-color: #27BD63;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.profile h4 {
+    font-weight: 600;
+}
+
+/* Tutorial Page */
+
+
+.navbar {
+    display: flex;
+    justify-content: space-between;
+}
+
+.navbar__icon {
+    display: flex;
+    align-items: center;
+}
+
+.nav__icon {
+    color: rgba(71, 98, 81, 1);
+
+}
+
+.search {
+    display: flex;
+    border: 1px solid #E0E0E0;
+    padding: 10px;
+    border-radius: 24px;
+    align-items: center;
+}
+
+.search input {
+    border: none;
+    margin-left: 20px;
+}
+
+.circle {
+    width: 10px;
+    height: 10px;
+    border: 3px solid rgba(71, 98, 81, 1);
+    border-radius: 50%;
+    position: relative;
+}
+
+.circle::after {
+    content: '';
+    position: absolute;
+    bottom: -100%;
+    right: -150%;
+    transform: rotate(-45deg);
+    width: 3px;
+    height: 5px;
+    background-color: rgba(71, 98, 81, 1);
 }

@@ -9,16 +9,16 @@ lists.forEach((item) =>
         activeLink(this);
     }));
 
-window.onscroll = () => {
-    section.forEach(sec => {
-        let top = window.scrollY;
-        let offset = sec.offsetTop;
-        let height = sec.offsetHeight;
-        let id = sec.getAttribute('id');
+// window.onscroll = () => {
+//     section.forEach((sec) => {
+//         let top = window.scrollY;
+//         let offset = sec.offsetTop;
+//         let height = sec.offsetHeight;
+//         let id = sec.getAttribute('id');
 
-        if (top >= offset && top < offset + height) {
-            const target = document.querySelector(`[href='#${id}']`).parentElement;
-            activeLink(target);
-        }
-    })
-};
+//         if (top >= offset && top < offset + height) {
+//             const target = document.querySelector(`[href='#${id}']`).parentElement;
+//             activeLink(target);
+//         }
+//     })
+// };
