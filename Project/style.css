@@ -276,6 +276,8 @@ header select:focus {
     display: flex;
     justify-content: space-between;
     flex-wrap: wrap;
+    position: relative;
+    z-index: 3;
 }
 
 .about-img,
@@ -306,9 +308,13 @@ header select:focus {
 
 /* Partners */
 #partners {
-    padding: 70px 0 50px 0;
+    padding: 70px 0 0px 0;
     position: relative;
     z-index: 3;
+}
+
+.partners .swiper {
+    padding-bottom: 0;
 }
 
 .partners {
@@ -356,7 +362,7 @@ header select:focus {
     left: 0;
     z-index: 2;
     width: 100%;
-    transform: translateY(-60%);
+    transform: translateY(-70%);
 }
 
 #team {
@@ -393,7 +399,7 @@ header select:focus {
 
 .slider__bottom__ellipse {
     position: absolute;
-    bottom: -5%;
+    bottom: -13%;
     left: 0;
     z-index: 5;
     /* transform: translateY(-100%); */
@@ -402,7 +408,7 @@ header select:focus {
 
 .slider__top__ellipse {
     position: absolute;
-    top: -4%;
+    top: -11%;
     left: 0;
     z-index: 4;
     /* transform: translateY(152%); */
@@ -948,19 +954,22 @@ header select:focus {
 .navbar__icon {
     display: flex;
     align-items: center;
+    gap: 20px;
 }
 
 .nav__icon {
     color: rgba(71, 98, 81, 1);
-
+    font-size: 20px;
+    cursor: pointer;
 }
 
 .search {
     display: flex;
     border: 1px solid #E0E0E0;
-    padding: 10px;
+    padding: 11px 15px;
     border-radius: 24px;
     align-items: center;
+
 }
 
 .search input {
@@ -969,20 +978,120 @@ header select:focus {
 }
 
 .circle {
-    width: 10px;
-    height: 10px;
+    width: 18px;
+    height: 18px;
     border: 3px solid rgba(71, 98, 81, 1);
     border-radius: 50%;
     position: relative;
+    cursor: pointer;
 }
 
 .circle::after {
     content: '';
     position: absolute;
-    bottom: -100%;
-    right: -150%;
+    bottom: -60%;
+    right: -60%;
     transform: rotate(-45deg);
     width: 3px;
-    height: 5px;
+    height: 6px;
     background-color: rgba(71, 98, 81, 1);
+}
+
+/* Tutorial */
+#tutorial {
+    padding: 50px 20px;
+}
+
+.tutorial__heading {
+    font-weight: 600;
+    color: rgba(64, 64, 64, 1);
+    margin-bottom: 30px;
+}
+
+.tutorial__table {
+    border-collapse: collapse;
+    width: 100%;
+    font-weight: 500;
+    color: rgba(64, 64, 64, 1);
+}
+
+.tutorial__table tr {
+    border: 1px solid #E5E5E5;
+    height: 45px;
+}
+
+.tutorial__table thead {
+    background-color: #E7F3EC;
+    color: rgba(90, 124, 102, 1);
+    letter-spacing: 1px;
+    text-align: left;
+}
+
+.tutorial__table thead tr th:last-of-type {
+    text-align: center;
+}
+
+.tutorial__table tbody tr td:last-of-type {
+    text-align: center;
+    color: rgba(13, 155, 70, 1);
+    cursor: pointer;
+}
+
+.tutorial__table tr td:first-of-type,
+.tutorial__table tr th:first-of-type {
+    padding: 0 20px;
+}
+
+.tutorial__table tbody tr:nth-of-type(even) {
+    background: rgba(248, 248, 248, 1);
+}
+
+/* Aside Right */
+#user {
+    display: flex;
+    position: relative;
+    justify-content: flex-end;
+}
+
+#aside__left {
+    width: 0%;
+    background: rgba(71, 98, 81, 1);
+    padding: 40px;
+    transform: translateX(-100%);
+    transition: 0.4s width, 2s ease tranform;
+    opacity: 0;
+    visibility: hidden;
+    height: 100vh;
+    overflow: hidden;
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+#aside__right {
+    width: 100%;
+    position: relative;
+}
+
+#aside__right header {
+    position: sticky;
+    width: 100%;
+    top: 0%;
+    left: 0;
+}
+
+#aside__input {
+    display: none;
+}
+
+#aside__input:checked~#aside__left {
+    transform: translateX(0%);
+    opacity: 1;
+    visibility: visible;
+    width: 30%;
+    position: fixed;
+}
+
+#aside__input:checked~#aside__right {
+    width: 70%;
 }

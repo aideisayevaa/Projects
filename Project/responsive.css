@@ -16,6 +16,9 @@
         line-height: 30px;
     }
 
+    .slider__bottom__ellipse {
+        bottom: -6%;
+    }
 
 }
 
@@ -37,13 +40,13 @@
         height: 390px;
     }
 
-    /* .slider__bottom__ellipse {
-        bottom: 19%;
+    .slider__bottom__ellipse {
+        bottom: 0%;
     }
 
     .slider__top__ellipse {
-        top: 29%;
-    } */
+        top: -2%;
+    }
 
 }
 
