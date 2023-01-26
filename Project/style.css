@@ -8,7 +8,7 @@
     list-style: none;
     outline: none;
     font-family: 'Montserrat', sans-serif;
-    user-select: none;
+    /* user-select: none; */
 }
 
 html {
@@ -46,6 +46,12 @@ a {
     font-weight: 400;
     line-height: 28px;
     color: #404040;
+}
+
+.vector {
+    position: absolute;
+    width: 100%;
+    z-index: 2;
 }
 
 
@@ -145,11 +151,8 @@ header select:focus {
 }
 
 .vector__bottom__green {
-    position: absolute;
     bottom: 0;
     left: 0;
-    z-index: 2;
-    width: 100%;
     transform: translateY(88%);
 }
 
@@ -251,11 +254,8 @@ header select:focus {
 }
 
 .vector__ellipse {
-    position: absolute;
     bottom: 0;
     left: 0;
-    z-index: 2;
-    width: 100%;
     transform: translateY(28%);
 }
 
@@ -341,27 +341,21 @@ header select:focus {
 /* Team */
 
 .bg__gray {
-    padding: 60px 0 150px 0;
+    padding: 60px 0 90px 0;
     background: rgba(247, 247, 247, 1);
     position: relative;
 }
 
 
 .vector__ellipse__white {
-    position: absolute;
     bottom: 0;
     left: 0;
-    z-index: 2;
-    width: 100%;
     transform: translateY(51%);
 }
 
 .vector__top__ellipse__white {
-    position: absolute;
     top: 0;
     left: 0;
-    z-index: 2;
-    width: 100%;
     transform: translateY(-70%);
 }
 
@@ -399,7 +393,7 @@ header select:focus {
 
 .slider__bottom__ellipse {
     position: absolute;
-    bottom: -13%;
+    bottom: -23%;
     left: 0;
     z-index: 5;
     /* transform: translateY(-100%); */
@@ -408,7 +402,7 @@ header select:focus {
 
 .slider__top__ellipse {
     position: absolute;
-    top: -11%;
+    top: -20%;
     left: 0;
     z-index: 4;
     /* transform: translateY(152%); */
@@ -441,6 +435,19 @@ header select:focus {
     padding: 10px;
 }
 
+#team .mySwiper {
+    position: relative;
+    z-index: 0;
+}
+
+.mySwiperDetails {
+    height: 100px;
+}
+
+.mySwiperDetails .swiper-slide {
+    height: 100%;
+}
+
 /* Mission and Vision*/
 #mission,
 #vision {
@@ -450,11 +457,8 @@ header select:focus {
 }
 
 .vector__ellipse__green {
-    position: absolute;
     bottom: 0;
     left: 0;
-    z-index: 2;
-    width: 100%;
     transform: translateY(69%);
 }
 
@@ -541,11 +545,8 @@ header select:focus {
 }
 
 .vector__ellipse__dark {
-    position: absolute;
     top: -10%;
     left: 0;
-    z-index: 2;
-    width: 100%;
     /* transform: translateY(19%); */
 }
 
@@ -575,7 +576,7 @@ header select:focus {
     flex-wrap: wrap;
 }
 
-.footer__nav li {
+.footer__nav li a {
     width: max-content;
     padding: 10px 24px;
     height: 50px;
@@ -625,7 +626,7 @@ header select:focus {
     background-color: transparent;
 }
 
-.footer__register button:last-of-type {
+.footer__register a:last-of-type button {
     background-color: #27BD63;
     border: 1px solid #27BD63;
 }
@@ -735,7 +736,7 @@ header select:focus {
 
 /* Login Page */
 #login {
-    height: 120vh;
+    height: 100vh;
     display: flex;
     position: relative;
     flex-wrap: wrap;
@@ -823,7 +824,7 @@ header select:focus {
     font-size: 14px;
 }
 
-.form a {
+.form a:not(.logo a) {
     color: rgba(5, 143, 243, 1);
     border-bottom: 1px solid rgba(5, 143, 243, 1);
     padding-bottom: 1px;
@@ -846,9 +847,10 @@ header select:focus {
     margin-top: 20px;
 }
 
+/* 
 .register {
     margin-bottom: 20px;
-}
+} */
 
 .form form>a {
     color: #27BD63;
