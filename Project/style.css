@@ -928,6 +928,8 @@ header select:focus {
     display: flex;
     gap: 15px;
     align-items: center;
+    position: relative;
+    padding: 30px 0;
 }
 
 .profile span {
@@ -941,12 +943,79 @@ header select:focus {
     align-items: center;
 }
 
+.profile__details {
+    opacity: 0;
+    visibility: hidden;
+    position: absolute;
+    transition: 0.4s ease all;
+    top: 89%;
+    right: 0;
+    background-color: #fff;
+    border-radius: 10px;
+    width: max-content;
+    max-width: 300px;
+    box-shadow: -1px 2px 24px -5px rgba(130, 130, 130, 0.397);
+   
+}
+
+.profile__details a li {
+    display: flex;
+    justify-content: space-between;
+    padding: 20px;
+    gap: 20px;
+    transition: 0.4s ease all;
+    background-color: #fff;
+}
+
+.profile__details a li:hover {
+    background-color: rgba(246, 246, 246, 0.629);
+}
+
 .profile h4 {
     font-weight: 600;
 }
 
-/* Tutorial Page */
+.profile:hover .profile__details {
+    opacity: 1;
+    visibility: visible;
+}
 
+/* Tutorial Page */
+#user {
+    display: flex;
+    justify-content: flex-end;
+    position: relative;
+}
+
+.sidebar__nav {
+    width: 300px;
+    background: rgba(71, 98, 81, 1);
+    color: #fff;
+    position: absolute;
+    z-index: 9999;
+    top: 0;
+    left: 0;
+    height: 100%;
+    transition: 0.4s ease all;
+    opacity: 1;
+    min-height: 100vh;
+}
+
+.sidebar__main {
+    width: calc(100% - 300px);
+    position: relative;
+    transition: 0.4s ease all;
+}
+
+
+.sidebar__main header {
+    position: sticky;
+    width: 100%;
+    top: 0%;
+    left: 0;
+}
+
+/* Tutorial Header */
 
 .navbar {
     display: flex;
@@ -961,7 +1030,7 @@ header select:focus {
 
 .nav__icon {
     color: rgba(71, 98, 81, 1);
-    font-size: 20px;
+    font-size: 24px;
     cursor: pointer;
 }
 
@@ -1048,52 +1117,95 @@ header select:focus {
     background: rgba(248, 248, 248, 1);
 }
 
-/* Aside Right */
-#user {
+#user .logo {
+    color: #fff;
+    text-align: left;
+    padding: 0 40px;
+}
+
+.sidebar__nav ul a li img {
+    width: 20px;
+    /* object-fit: cover; */
+    /* height: 20px; */
+}
+
+.sidebar__nav ul li {
+    padding: 20px 40px;
+    cursor: pointer;
+    transition: 0.4s ease all;
+}
+
+.sidebar__nav ul a li {
     display: flex;
-    position: relative;
-    justify-content: flex-end;
+    gap: 12px;
+    font-size: 16px;
+    align-items: center;
+    font-weight: 500;
 }
 
-#aside__left {
-    width: 0%;
-    background: rgba(71, 98, 81, 1);
-    padding: 40px;
-    transform: translateX(-100%);
-    transition: 0.4s width, 2s ease tranform;
+.sidebar__nav ul li:hover {
+    background: rgba(89, 114, 98, 1);
+}
+
+#open__menu:checked+.sidebar__nav {
+    transform: translate(-100%);
     opacity: 0;
-    visibility: hidden;
-    height: 100vh;
-    overflow: hidden;
-    position: absolute;
-    top: 0;
-    left: 0;
 }
 
-#aside__right {
+#open__menu:checked~.sidebar__main {
     width: 100%;
-    position: relative;
 }
 
-#aside__right header {
-    position: sticky;
-    width: 100%;
-    top: 0%;
-    left: 0;
-}
-
-#aside__input {
+#open__menu {
     display: none;
 }
 
-#aside__input:checked~#aside__left {
-    transform: translateX(0%);
-    opacity: 1;
-    visibility: visible;
-    width: 30%;
-    position: fixed;
+/* Quiz */
+
+#quiz {
+    padding: 50px;
 }
 
-#aside__input:checked~#aside__right {
-    width: 70%;
+.quizzes {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    row-gap: 30px;
+}
+
+.quiz {
+    width: 48%;
+    border: 1px solid rgba(224, 224, 224, 1);
+    padding: 16px 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.quiz__details h4 {
+    font-size: 18px;
+    margin-bottom: 17px;
+    color: rgba(64, 64, 64, 1);
+}
+
+.quiz__details p {
+    color: rgba(129, 146, 136, 1);
+    font-weight: 500;
+}
+
+
+.quiz__details span {
+    color: rgba(129, 146, 136, 1);
+    font-size: 12px;
+    font-weight: 300;
+}
+
+.quiz a {
+    padding: 14px 24px;
+    border-radius: 24px;
+    background-color: #27BD63;
+    color: #fff;
+    font-weight: 400;
+    border: none;
+    width: max-content;
 }
