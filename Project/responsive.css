@@ -89,9 +89,6 @@
         padding: 0 20px;
     }
 
-    .sidebar__nav header {
-        padding: 0 20px;
-    }
 
     header nav {
         width: 100%;
@@ -600,11 +597,11 @@
         padding: 1em;
     }
 
-    .sidebar__nav header {
+    .sidebar__main header {
         padding: 0 8px !important;
     }
 
-    .sidebar__nav .nav__login {
+    .sidebar__main .nav__login {
         gap: 5px;
         margin-left: 6px;
     }
@@ -626,9 +623,17 @@
         width: 80px;
     }
 
+    .sidebar__main header .container {
+        gap: 10px;
+    }
+
+    #tutorial .container {
+        margin: 0px;
+    }
 }
 
 @media screen and (max-width:350px) {
+
     /* .slider__bottom__ellipse {
         bottom: 20%;
         height: 70px;
@@ -638,6 +643,7 @@
         top: 38%;
         height: 70px;
     } */
+
 
     .vector__bottom__green {
         transform: translateY(190%);
@@ -669,7 +675,7 @@
         width: 60px;
     }
 
-    .sidebar__nav .nav__login {
+    .sidebar__main .nav__login {
         margin-left: 10px;
     }
 }
