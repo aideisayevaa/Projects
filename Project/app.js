@@ -1,3 +1,5 @@
+/* Header */
+
 let section = document.querySelectorAll('section');
 let lists = document.querySelectorAll('.nav__list a');
 function activeLink(li) {

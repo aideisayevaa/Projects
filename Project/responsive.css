@@ -64,7 +64,17 @@
         margin: 15px;
     }
 
+    .sidebar__nav {
+        width: 260px;
+    }
 
+    .sidebar__nav ul a li {
+        font-size: 15px;
+    }
+
+    .sidebar__main {
+        width: calc(100% - 260px);
+    }
 }
 
 @media screen and (max-width:992px) {
@@ -174,6 +184,35 @@
     .slider__top__ellipse {
         top: -9%;
     }
+
+    .sidebar__main {
+        width: 100%;
+    }
+
+    .sidebar__nav {
+        transform: translate(-100%);
+        opacity: 0;
+    }
+
+    #open__menu:checked+.sidebar__nav {
+        transition: 0.4s ease all;
+        opacity: 1;
+        transform: translate(0%);
+        width: 50%;
+    }
+
+    .sidebar__nav ul {
+        position: relative;
+    }
+
+    #sidebar__close {
+        display: block;
+        position: absolute;
+        top: -29%;
+        right: 10%;
+        font-size: 29px;
+    }
+
 }
 
 @media screen and (max-width:790px) {
@@ -316,6 +355,35 @@
     .vector__ellipse__white {
         height: 125px;
     }
+
+    .tutorial__table {
+        font-size: 14px;
+    }
+
+
+    .tutorial__table tbody tr td:nth-of-type(2) {
+        max-width: 150px;
+        width: max-content;
+    }
+
+    .tutorial__table tbody tr td:nth-of-type(3) {
+        max-width: 200px;
+        width: max-content;
+    }
+
+    .tutorial__table tbody tr td:nth-of-type(4) {
+        max-width: 400px;
+        width: max-content;
+    }
+
+    .sidebar__main .search input {
+        width: 120px;
+    }
+
+    .sidebar__main .nav__login {
+        font-size: 14px;
+    }
+
 }
 
 @media screen and (max-width:540px) {
@@ -348,6 +416,22 @@
     .slider__bottom__ellipse {
         bottom: -8%;
         height: 100px;
+    }
+
+    .tutorial__table tbody tr td:nth-of-type(2) {
+        max-width: auto;
+    }
+
+    .tutorial__table tbody tr td:nth-of-type(3) {
+        max-width: auto;
+    }
+
+    .tutorial__table tbody tr td:nth-of-type(4) {
+        max-width: auto;
+    }
+
+    .sidebar__main header{
+        position: fixed;
     }
 
 }
@@ -442,6 +526,13 @@
 
     .profile {
         font-size: 12px;
+    }
+
+
+    .tutorial__table th,
+    .tutorial__table td {
+        display: table-cell;
+        padding: 1em;
     }
 }
 
