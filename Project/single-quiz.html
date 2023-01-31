@@ -21,6 +21,9 @@
             <div class="sidebar__nav">
                 <div class="logo"><a href="#">LOGO</a></div>
                 <ul>
+                    <label for="open__menu">
+                        <div id="sidebar__close"><i class="fa-solid fa-xmark"></i></div>
+                    </label>
                     <a href="./tutorial.html">
                         <li>
                             <img src="./img/icon_1.png" alt=""> <span>Elektron material</span>
@@ -36,7 +39,7 @@
                             <img src="./img/icon_3.png" alt=""> <span>Fərdi fəaliyyət</span>
                         </li>
                     </a>
-                    <a href="./evaluation.html">
+                    <a href="./marks.html">
                         <li>
                             <img src="./img/icon_4.png" alt=""> <span>Qiymətləndirmə</span>
                         </li>
@@ -98,60 +101,103 @@
 
                 <!-- Single Quiz -->
                 <section id="quiz">
-                    <div class="tutorial__heading">
-                        <h3>Quiz</h3>
-                    </div>
-                    <div class="quizzes">
-                        <div class="quiz">
-                            <div class="quiz__details">
-                                <h4>Quiz Name</h4>
-                                <p>You will have 30 questions to answer</p>
-                                <span>Estimated time 50 minutes</span>
-                            </div>
-                            <a href="#">Start Quiz</a>
+                    <div class="tutorial__heading">Quiz</div>
+                    <form class="question">
+                        <ul class="question__numbers">
+                            <li class="active__question">1</li>
+                            <li>2</li>
+                            <li>3</li>
+                            <li>4</li>
+                            <li>5</li>
+                            <li>6</li>
+                            <li>7</li>
+                            <li>8</li>
+                            <li>9</li>
+                            <li>10</li>
+                            <li>11</li>
+                        </ul>
+                        <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Consequuntur quis minima asperiores
+                            fugiat earum quod quas aspernatur perspiciatis accusantium repellat minus aut unde alias
+                            provident magnam, consequatur, molestias inventore?
+                        </p>
+                        <ul class="question__options">
+                            <li>
+                                <label>
+                                    <input type="radio" id="option" name="option" />
+                                    <div class="question__check">
+                                        <i class="fa-solid fa-check"></i>
+                                    </div>
+                                    A
+                                    <span>Lorem ipsum</span>
+                                </label>
+                            </li>
+                            <li>
+                                <label>
+                                    <input type="radio" id="option" name="option" />
+                                    <div class="question__check">
+                                        <i class="fa-solid fa-check"></i>
+                                    </div>
+                                    B
+                                    <span>Quis nostrud exerci tation</span>
+                                </label>
+                            </li>
+                            <li>
+                                <label>
+                                    <input type="radio" id="option" name="option" />
+                                    <div class="question__check">
+                                        <i class="fa-solid fa-check"></i>
+                                    </div>
+                                    C
+                                    <span>Ad minim veniam</span>
+                                </label>
+                            </li>
+                            <li>
+                                <label>
+                                    <input type="radio" id="option" name="option" />
+                                    <div class="question__check">
+                                        <i class="fa-solid fa-check"></i>
+                                    </div>
+                                    D
+                                    <span>Eugait nulla facilisi</span>
+                                </label>
+                            </li>
+                            <li>
+                                <label>
+                                    <input type="radio" id="option" name="option" />
+                                    <div class="question__check">
+                                        <i class="fa-solid fa-check"></i>
+                                    </div>E
+                                    <span>Delenit augue duis</span>
+                                </label>
+                            </li>
+
+                        </ul>
+                        <div class="line"></div>
+                        <div class="question__submit">
+                            <input type="submit" value="Təsdiqlə">
                         </div>
+                    </form>
+                </section>
 
 
-                        <div class="quiz">
-                            <div class="quiz__details">
-                                <h4>Quiz Name</h4>
-                                <p>You will have 30 questions to answer</p>
-                                <span>Estimated time 50 minutes</span>
-                            </div>
-                            <a href="#">Start Quiz</a>
-                        </div>
-                        <div class="quiz">
-                            <div class="quiz__details">
-                                <h4>Quiz Name</h4>
-                                <p>You will have 30 questions to answer</p>
-                                <span>Estimated time 50 minutes</span>
-                            </div>
-                            <a href="#">Start Quiz</a>
-                        </div>
-                        <div class="quiz">
-                            <div class="quiz__details">
-                                <h4>Quiz Name</h4>
-                                <p>You will have 30 questions to answer</p>
-                                <span>Estimated time 50 minutes</span>
-                            </div>
-                            <a href="#">Start Quiz</a>
-                        </div>
-                        <div class="quiz">
-                            <div class="quiz__details">
-                                <h4>Quiz Name</h4>
-                                <p>You will have 30 questions to answer</p>
-                                <span>Estimated time 50 minutes</span>
-                            </div>
-                            <a href="#">Start Quiz</a>
-                        </div>
-                    </div>
+                <div class="page__bottom">
+                    <p> ©2023 Powered by <a href="#">CODERS AZERBAIJAN</a></p>
+                </div>
             </div>
-            </section>
         </div>
-    </div>
-    </div>
 
+        <script>
+            let ul = document.querySelector(".question__numbers")
+            let li = document.querySelectorAll(".question__numbers li")
 
+            ul.addEventListener("click", (e) => {
+                if (e.target.tagName !== "LI") {
+                    return;
+                }
+                [...li].map(a => a.classList.remove("active__question"))
+                e.target.classList.add("active__question")
+            })
+        </script>
 </body>
 
 </html>

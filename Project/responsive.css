@@ -20,6 +20,9 @@
         bottom: -12%;
     }
 
+    .quiz a {
+        font-size: 15px;
+    }
 }
 
 @media screen and (max-width:1200px) {
@@ -46,6 +49,11 @@
 
     .slider__top__ellipse {
         top: -12%;
+    }
+
+    .question p {
+        font-size: 18px;
+        line-height: 28px;
     }
 
 }
@@ -75,6 +83,24 @@
     .sidebar__main {
         width: calc(100% - 260px);
     }
+
+    .quiz {
+        flex-direction: column;
+        align-items: flex-start !important;
+        gap: 20px;
+        transition: 0.4s ease all;
+    }
+
+    .quiz a {
+        height: 42px;
+    }
+
+    #open__menu:checked~.sidebar__main .quiz {
+        flex-direction: row;
+        align-items: center;
+        gap: 0px;
+    }
+
 }
 
 @media screen and (max-width:992px) {
@@ -193,6 +219,7 @@
     .sidebar__nav {
         transform: translate(-100%);
         opacity: 0;
+        position: fixed;
     }
 
     #open__menu:checked+.sidebar__nav {
@@ -200,6 +227,12 @@
         opacity: 1;
         transform: translate(0%);
         width: 50%;
+    }
+
+    #open__menu:checked~.sidebar__main .quiz {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 20px;
     }
 
     .sidebar__nav ul {
@@ -389,6 +422,13 @@
         font-size: 14px;
     }
 
+    #quiz {
+        padding: 40px 25px;
+    }
+
+    .blog .quiz__details p {
+        font-size: 15px;
+    }
 }
 
 @media screen and (max-width:540px) {
@@ -456,6 +496,10 @@
         font-size: 14px;
     }
 
+    .page__bottom {
+        font-size: 10px;
+    }
+
 
     #open__menu:checked+.sidebar__nav {
 
@@ -496,6 +540,28 @@
         left: 50%;
         transform: translateX(-20%);
     } */
+
+    .quiz {
+        width: 100%;
+    }
+
+    .quiz a {
+        font-size: 12px;
+        width: 100px;
+        height: 40px;
+    }
+
+    #quiz {
+        padding: 100px 25px;
+    }
+
+    .question p {
+        font-size: 16px;
+    }
+
+    .question__options li label span {
+        font-size: 15px;
+    }
 }
 
 @media screen and (max-width:476px) {
@@ -627,9 +693,15 @@
         gap: 10px;
     }
 
-    #tutorial .container {
-        margin: 0px;
+    #open__menu:checked+.sidebar__nav {
+        width: 100%;
     }
+
+    .page__bottom {
+        background: #fff;
+    }
+
+
 }
 
 @media screen and (max-width:350px) {
@@ -659,7 +731,7 @@
     }
 
     .profile span {
-        width: 24px;
+        width: 30px;
         height: 24px;
     }
 
@@ -672,10 +744,14 @@
     }
 
     .sidebar__main .search input {
-        width: 60px;
+        width: 48px;
     }
 
     .sidebar__main .nav__login {
         margin-left: 10px;
+    }
+
+    .sidebar__main .navbar__icon {
+        gap: 10px;
     }
 }

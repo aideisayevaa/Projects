@@ -2,7 +2,7 @@
 
 const ul = document.getElementById("pagination");
 const rows = [...document.querySelectorAll(".tutorial__table tbody tr")];
-let singlePage = 10;
+let singlePage = 8;
 const total = Math.ceil(rows.length / singlePage);
 let active = 1;
 const createPages = (current) => {
@@ -43,4 +43,4 @@ const createPages = (current) => {
         })
     }
 }
-createPages(active)
+rows.length > 5 && createPages(active)
