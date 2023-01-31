@@ -430,10 +430,56 @@
         max-width: auto;
     }
 
-    .sidebar__main header{
+    .sidebar__main header {
         position: fixed;
     }
 
+
+    .tutorial__table {
+        font-size: 10px;
+    }
+
+    .tutorial__table td {
+        padding: 5px;
+    }
+
+    #pagination li {
+        width: 25px;
+        height: 25px;
+        border-radius: 7px;
+        font-size: 14px;
+    }
+
+    .search {
+        padding: 8px 10px;
+    }
+
+    .circle {
+        width: 15px;
+        height: 15px;
+        border: 2.5px solid rgba(71, 98, 81, 1);
+    }
+
+    .circle::after {
+        width: 2.5px;
+        height: 5px;
+    }
+
+    .menu-button i {
+        font-size: 20px;
+    }
+
+    .sidebar__main .search input {
+        width: 90px;
+    }
+
+    /* 
+    #pagination {
+        position: absolute;
+
+        left: 50%;
+        transform: translateX(-20%);
+    } */
 }
 
 @media screen and (max-width:476px) {
@@ -534,6 +580,19 @@
         display: table-cell;
         padding: 1em;
     }
+
+    .sidebar__nav header {
+        padding: 0 8px !important;
+    }
+
+    .sidebar__nav .nav__login {
+        gap: 5px;
+        margin-left: 6px;
+    }
+
+    .profile h4 {
+        text-align: right;
+    }
 }
 
 @media screen and (max-width:350px) {
@@ -571,5 +630,13 @@
 
     .language {
         font-size: 10px;
+    }
+
+    .sidebar__main .search input {
+        width: 60px;
+    }
+
+    .sidebar__nav .nav__login {
+        margin-left: 10px;
     }
 }
