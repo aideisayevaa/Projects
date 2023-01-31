@@ -89,6 +89,10 @@
         padding: 0 20px;
     }
 
+    .sidebar__nav header {
+        padding: 0 20px;
+    }
+
     header nav {
         width: 100%;
     }
@@ -211,6 +215,10 @@
         top: -29%;
         right: 10%;
         font-size: 29px;
+    }
+
+    #tutorial {
+        padding: 50px 6px;
     }
 
 }
@@ -432,6 +440,7 @@
 
     .sidebar__main header {
         position: fixed;
+        padding: 0 6px;
     }
 
 
@@ -448,6 +457,16 @@
         height: 25px;
         border-radius: 7px;
         font-size: 14px;
+    }
+
+
+    #open__menu:checked+.sidebar__nav {
+
+        width: 70%;
+    }
+
+    #tutorial {
+        padding: 90px 6px;
     }
 
     .search {
@@ -593,6 +612,20 @@
     .profile h4 {
         text-align: right;
     }
+
+    .profile span {
+        width: 32px;
+        height: 28px;
+    }
+
+    .sidebar__main .nav__login {
+        width: 50%;
+    }
+
+    .sidebar__main .search input {
+        width: 80px;
+    }
+
 }
 
 @media screen and (max-width:350px) {
