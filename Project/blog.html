@@ -19,6 +19,7 @@
         <div id="user">
             <input type="checkbox" id="open__menu" />
             <div class="sidebar__nav">
+
                 <div class="logo"><a href="#">LOGO</a></div>
                 <ul>
                     <label for="open__menu">
@@ -34,7 +35,7 @@
                             <img src="./img/icon_2.png" alt=""> <span>Quize</span>
                         </li>
                     </a>
-                    <a href="./activity.html">
+                    <a href="./essay.html">
                         <li>
                             <img src="./img/icon_3.png" alt=""> <span>Fərdi fəaliyyət</span>
                         </li>
@@ -46,7 +47,7 @@
                     </a>
                     <a href="./blog.html">
                         <li>
-                            <img src="./img/icon_5.png" alt=""> <span>Blok</span>
+                            <img src="./img/icon_5.png" alt=""> <span>Blog</span>
                         </li>
                     </a>
 
@@ -98,59 +99,88 @@
                     </div>
                 </header>
 
-
                 <!-- Blog -->
-                <section id="quiz" class="blog">
-                    <div class="tutorial__heading">Blog</div>
-                    <div class="quizzes">
-                        <div class="quiz">
-                            <div class="quiz__details">
-                                <h4>Layihe</h4>
-                                <p><b>Name Surname </b> Lorem ipsum dolor ...</p>
+                <section id="message">
+                    <div class="message__content">
+                        <div class="msg msg__left">
+                            <div class="msg__bubble">
+                                <h3>Name Surname</h3>
+                                <p>Lorem ipsum dolor sit amet
+                                    consectetur adipisicing elit. Commodi, ducimus.</p>
+                                <div class="msg__time">15:03</div>
                             </div>
-                            <a href="./single-quiz.html">Comment</a>
+                            <div class="msg__left__cut"></div>
+                        </div>
+                        <div class="msg msg__left">
+                            <div class="msg__bubble">
+                                <h3>Name Surname</h3>
+                                <p>Lorem ipsum dolor sit amet
+                                    consectetur adipisicing elit. Commodi,t amet
+                                    consectetur adipisicing elit. Commodi,t amet
+                                    consectetur adipisicing elit. Commodi,t amet
+                                    consectetur adipisicing elit. Commodi,t amet
+                                    consectetur adipisicing elit. Commodi, ducimus.</p>
+                                <div class="msg__time">15:16</div>
+                            </div>
+                            <div class="msg__left__cut"></div>
+                        </div>
+                        <div class="msg msg__right">
+                            <div class="msg__bubble">
+                                <h3>Name Surname</h3>
+                                <p>Lorem ipsum dolor sit amet
+                                    consectetur adipisicing elit. Commodi, ducimus.</p>
+                                <div class="msg__time">15:55</div>
+                            </div>
+                            <div class="msg__right__cut"></div>
+                        </div>
+                        <div class="msg msg__left">
+                            <div class="msg__bubble">
+                                <h3>Name Surname</h3>
+                                <p>Lorem ipsum dolor sit amet
+                                    consectetur adipisicing elit. Commodi, ducimus.</p>
+                                <div class="msg__time">15:55</div>
+                            </div>
+                            <div class="msg__left__cut"></div>
+                        </div>
+                        <div class="msg msg__right">
+                            <div class="msg__bubble">
+                                <h3>Name Surname</h3>
+                                <p>Lorem ipsum dolor sit amet
+                                    consectetur adipisicing elit. Commodi, ducimus.</p>
+                                <div class="msg__time">15:55</div>
+                            </div>
+                            <div class="msg__right__cut"></div>
                         </div>
 
-
-                        <div class="quiz">
-                            <div class="quiz__details">
-                                <h4>Layihe</h4>
-                                <p><b>Name Surname </b> Lorem ipsum dolor ...</p>
-                            </div>
-                            <a href="./single-quiz.html">Comment</a>
-                        </div>
-                        <div class="quiz">
-                            <div class="quiz__details">
-                                <h4>Layihe</h4>
-                                <p><b>Name Surname </b> Lorem ipsum dolor ...</p>
-                            </div>
-                            <a href="./single-quiz.html">Comment</a>
-                        </div>
-                        <div class="quiz">
-                            <div class="quiz__details">
-                                <h4>Layihe</h4>
-                                <p><b>Name Surname </b> Lorem ipsum dolor ...</p>
-                            </div>
-                            <a href="./single-quiz.html">Comment</a>
-                        </div>
-                        <div class="quiz">
-                            <div class="quiz__details">
-                                <h4>Layihe</h4>
-                                <p><b>Name Surname </b> Lorem ipsum dolor ...</p>
-                            </div>
-                            <a href="./single-quiz.html">Comment</a>
-                        </div>
                     </div>
 
-                    <div class="page__bottom">
-                        <p> ©2023 Powered by <a href="#">CODERS AZERBAIJAN</a></p>
+                    <div class="send__message">
+                        <img src="./img/smile.png" alt="">
+                        <input type="text" />
+                        <i class="fa-brands fa-telegram"></i>
                     </div>
+                </section>
+
+
+
+                <div class="page__bottom">
+                    <p> ©2023 Powered by <a href="#">CODERS AZERBAIJAN</a></p>
+                </div>
             </div>
-            </section>
         </div>
     </div>
+    <script>
+        let green = ["#F0F9F3", "#DDE4E0", "#E0F1E5"]
+        let bubbles = [...document.querySelectorAll(".msg__left .msg__bubble")]
+        let triangle = [...document.querySelectorAll(".msg__left .msg__left__cut")]
+        bubbles.map((a,index) => {
+            r = Math.floor(Math.random() * green.length)
+            console.log(r)
+            a.style.backgroundColor = green[r]
+            triangle[index].style.backgroundColor = green[r]
+        })
 
-
+    </script>
 </body>
 
 </html>

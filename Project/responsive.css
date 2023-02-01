@@ -101,6 +101,10 @@
         gap: 0px;
     }
 
+    .msg__bubble {
+        max-width: 65%;
+    }
+
 }
 
 @media screen and (max-width:992px) {
@@ -429,6 +433,30 @@
     .blog .quiz__details p {
         font-size: 15px;
     }
+
+    .msg__bubble h3 {
+        font-size: 18px;
+    }
+
+    .msg__bubble p {
+        font-size: 14px;
+    }
+
+    .msg__time {
+        margin: 0;
+    }
+
+    .msg__bubble {
+        max-width: 70%;
+    }
+
+    #message~.page__bottom {
+        display: none;
+    }
+
+    .send__message {
+        transform: translateY(0);
+    }
 }
 
 @media screen and (max-width:540px) {
@@ -562,6 +590,10 @@
     .question__options li label span {
         font-size: 15px;
     }
+
+    .message__content {
+        height: 100vh;
+    }
 }
 
 @media screen and (max-width:476px) {
@@ -659,8 +691,12 @@
 
     .tutorial__table th,
     .tutorial__table td {
-        display: table-cell;
-        padding: 1em;
+        /* display: table-cell; */
+        padding: 0.5em;
+    }
+
+    .mark .tutorial__table th {
+        font-size: 8px;
     }
 
     .sidebar__main header {
@@ -701,6 +737,13 @@
         background: #fff;
     }
 
+    .message__content {
+        padding: 40px 30px 10px;
+    }
+
+    .msg__bubble {
+        max-width: 82%;
+    }
 
 }
 
@@ -754,4 +797,6 @@
     .sidebar__main .navbar__icon {
         gap: 10px;
     }
+
+
 }

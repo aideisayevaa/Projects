@@ -19,8 +19,12 @@
         <div id="user">
             <input type="checkbox" id="open__menu" />
             <div class="sidebar__nav">
+
                 <div class="logo"><a href="#">LOGO</a></div>
                 <ul>
+                    <label for="open__menu">
+                        <div id="sidebar__close"><i class="fa-solid fa-xmark"></i></div>
+                    </label>
                     <a href="./tutorial.html">
                         <li>
                             <img src="./img/icon_1.png" alt=""> <span>Elektron material</span>
@@ -31,7 +35,7 @@
                             <img src="./img/icon_2.png" alt=""> <span>Quize</span>
                         </li>
                     </a>
-                    <a href="./activity.html">
+                    <a href="./essay.html">
                         <li>
                             <img src="./img/icon_3.png" alt=""> <span>Fərdi fəaliyyət</span>
                         </li>
@@ -43,7 +47,7 @@
                     </a>
                     <a href="./blog.html">
                         <li>
-                            <img src="./img/icon_5.png" alt=""> <span>Blok</span>
+                            <img src="./img/icon_5.png" alt=""> <span>Blog</span>
                         </li>
                     </a>
 
@@ -97,65 +101,23 @@
 
 
                 <!-- Tutorial -->
-                <section id="tutorial">
+                <section id="essay">
                     <div class="container">
-                        <div class="tutorial__heading">Elektron material</div>
-                        <table class="tutorial__table">
-                            <thead>
-                                <tr>
-                                    <th>#</th>
-                                    <th>MÖVZU</th>
-                                    <th>MATERİALIN ADI</th>
-                                    <th>QEYD</th>
-                                    <th>YÜKLƏ</th>
-                                </tr>
-                            </thead>
-                            <tbody>
-                                <tr>
-                                    <td>1</td>
-                                    <td>Lorem</td>
-                                    <td>Ipsum adipiscing</td>
-                                    <td>Dolor sit amet consectetur</td>
-                                    <td><i class="fa-solid fa-download"></i></td>
-                                </tr>
-                                <tr>
-                                    <td>2</td>
-                                    <td>Lorem</td>
-                                    <td>Ipsum adipiscing</td>
-                                    <td>Dolor sit amet consectetur</td>
-                                    <td><i class="fa-solid fa-download"></i></td>
-                                </tr>
-                                <tr>
-                                    <td>3</td>
-                                    <td>Lorem</td>
-                                    <td>Ipsum adipiscing</td>
-                                    <td>Dolor sit amet consectetur</td>
-                                    <td><i class="fa-solid fa-download"></i></td>
-                                </tr>
-                                <tr>
-                                    <td>4</td>
-                                    <td>Lorem</td>
-                                    <td>Ipsum adipiscing</td>
-                                    <td>Dolor sit amet consectetur</td>
-                                    <td><i class="fa-solid fa-download"></i></td>
-                                </tr>
-                                <tr>
-                                    <td>5</td>
-                                    <td>Lorem</td>
-                                    <td>Ipsum adipiscing</td>
-                                    <td>Dolor sit amet consectetur</td>
-                                    <td><i class="fa-solid fa-download"></i></td>
-                                </tr>
-
-
-                            </tbody>
-                        </table>
+                        <div class="tutorial__heading">Fərdi Fəaliyyət</div>
+                        <form class="essay">
+                            <input type="text" placeholder="Mövzu" class="essay__title" />
+                            <textarea placeholder="Essay"></textarea>
+                            <input type="submit" class="essay__submit" />
+                        </form>
                     </div>
                 </section>
+
+                <div class="page__bottom">
+                    <p> ©2023 Powered by <a href="#">CODERS AZERBAIJAN</a></p>
+                </div>
             </div>
         </div>
     </div>
-
 
 </body>
 
